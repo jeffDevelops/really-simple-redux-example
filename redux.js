@@ -97,7 +97,6 @@ window.onload = () => {
       store.dispatch(outOfStockAction);
     }
 
-    console.log('qty: ', qty);
     // Check if on sale
     if (qty < 15) {
       store.dispatch(removeFromSaleAction);
@@ -115,7 +114,7 @@ window.onload = () => {
     if (qty > 0 && isOutOfStock) {
       store.dispatch(inStockAction);
     }
-    console.log('qty: ', qty);
+    
     // Check if on sale
     if (qty >= 15) {
       store.dispatch(putOnSaleAction);
